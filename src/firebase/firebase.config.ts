@@ -5,18 +5,18 @@ import { initializeApp } from "firebase/app";
 import { getStorage } from "firebase/storage";
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAv9ofsNZkBkdqCynHmQh9LYHJaIzS9i4w",
-  authDomain: "bike-booker-f4a7f.firebaseapp.com",
-  projectId: "bike-booker-f4a7f",
-  storageBucket: "bike-booker-f4a7f.appspot.com",
-  messagingSenderId: "981981223939",
-  appId: "1:981981223939:web:70e48fd987f1cdf1930236"
+  apiKey: "AIzaSyAgy-hBj72ie_9o-2vmVRdHI-juJaqBJIs",
+  authDomain: "bike-rental-client.firebaseapp.com",
+  projectId: "bike-rental-client",
+  storageBucket: "bike-rental-client.appspot.com",
+  messagingSenderId: "266176837044",
+  appId: "1:266176837044:web:44603b72f9f7a0b1816ee1",
 };
 
 // Initialize Firebase
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-export const storage = getStorage(app)
+export const storage = getStorage(app);
 
-export default app; 
+export default app;

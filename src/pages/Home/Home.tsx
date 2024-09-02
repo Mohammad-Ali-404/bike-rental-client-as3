@@ -1,9 +1,9 @@
-import { useRef, useState } from 'react';
+import { useRef, useState } from "react";
 import AvailableBike from "./Section/AvailableBike";
 import ContactUs from "./Section/ContactUps";
 import Hero from "./Section/Hero";
 import TestimonialsSection from "./Section/TestimonialsSection";
-import WheelSpinComponent from "./Section/WheelSpinComponent";
+// import WheelSpinComponent from "./Section/WheelSpinComponent";
 import WhyChooseUs from "./Section/WhyChoosUs";
 
 const Home = () => {
@@ -23,9 +23,10 @@ const Home = () => {
       <div ref={availableBikeRef}>
         <AvailableBike searchQuery={searchQuery} />
       </div>
-      <TestimonialsSection />
       <WhyChooseUs />
-      <WheelSpinComponent />
+
+      <TestimonialsSection />
+      {/* <WheelSpinComponent /> */}
       <ContactUs />
     </div>
   );

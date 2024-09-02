@@ -1,4 +1,4 @@
-import video from "@/assets/hero.mp4";
+// import video from "@/assets/hero.mp4";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { FieldValues, SubmitHandler } from "react-hook-form";
@@ -18,16 +18,9 @@ const Hero = ({ onSearch }: HeroProps) => {
 
   return (
     <div className="relative flex items-center justify-center h-[calc(100vh-88px)] bg-gray-900">
-      <video
-        className="absolute inset-0 object-cover w-full h-full"
-        src={video}
-        autoPlay
-        loop
-        muted
-        playsInline
-      />
+      <img src="../../../assets/tvs-ronin.jpeg" alt="" />
 
-      <div className="absolute inset-0 bg-black opacity-50"></div>
+      {/* <div className="absolute inset-0 bg-black opacity-50"></div> */}
 
       <div className="relative z-10 text-center text-white px-4 sm:px-8">
         <motion.div

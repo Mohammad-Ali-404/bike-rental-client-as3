@@ -62,7 +62,10 @@ const AvailableBike = ({ searchQuery }: AvailableBikeProps) => {
           ) : (
             bikeData?.data.map(
               ({ image, brand, _id, name, model, cc, year }: TBike) => (
-                <Card key={_id}>
+                <Card
+                  key={_id}
+                  className="bg-transparent text-gray-950 hover:shadow-lg transform transition-all duration-300"
+                >
                   <CardHeader className="mb-5">
                     <h1 className="text-xl font-bold capitalize">{name}</h1>
                     <Separator />
@@ -78,14 +81,14 @@ const AvailableBike = ({ searchQuery }: AvailableBikeProps) => {
                     <div className="grid grid-cols-2 justify-between">
                       <div className="flex flex-col gap-3">
                         <div className="flex gap-2">
-                          <Bike className="w-6 h-6 text-yellow-500" />
+                          <Bike className="w-6 h-6 text-teal-500" />
                           <div>
                             <h3 className="font-bold uppercase">{brand}</h3>
                             <span>Brand</span>
                           </div>
                         </div>
                         <div className="flex gap-2">
-                          <Cog className="w-6 h-6 text-yellow-500" />
+                          <Cog className="w-6 h-6 text-teal-500" />
                           <div>
                             <h3 className=" font-bold uppercase">{cc}</h3>
                             <span>CC</span>
@@ -95,14 +98,14 @@ const AvailableBike = ({ searchQuery }: AvailableBikeProps) => {
 
                       <div className="flex flex-col gap-3">
                         <div className="flex gap-2">
-                          <Component className="w-6 h-6 text-yellow-500" />
+                          <Component className="w-6 h-6 text-teal-500" />
                           <div>
                             <h3 className=" font-bold uppercase">{model}</h3>
                             <span>Model</span>
                           </div>
                         </div>
                         <div className="flex gap-2">
-                          <CalendarRange className="w-6 h-6 text-yellow-500" />
+                          <CalendarRange className="w-6 h-6 text-teal-500" />
                           <div>
                             <h3 className=" font-bold uppercase">{year}</h3>
                             <span>Year</span>
@@ -113,8 +116,11 @@ const AvailableBike = ({ searchQuery }: AvailableBikeProps) => {
                   </CardContent>
                   <Separator />
                   <CardFooter className="flex items-center justify-end mt-4">
-                    <Button>
-                      <Link to={`/bike-details-client/${_id}`}>
+                    <Button className="bg-teal-500 text-white hover:bg-teal-600 transition">
+                      <Link
+                        to={`/bike-details-client/${_id}`}
+                        className="text-white"
+                      >
                         View Details
                       </Link>
                     </Button>

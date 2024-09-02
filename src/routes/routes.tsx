@@ -18,7 +18,7 @@ import PaymentBooking from "@/pages/Dashboard/Client/PaymentBooking/PaymentBooki
 import DashboardHome from "@/pages/Dashboard/DashboardHome";
 import Error from "@/pages/Error/Error";
 import Home from "@/pages/Home/Home";
-import PrivateRoute from "@/private/PrivateRoute";
+// import PrivateRoute from "@/private/PrivateRoute";
 import { createBrowserRouter } from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -62,17 +62,13 @@ const router = createBrowserRouter([
   },
   {
     path: "/dashboard",
-    element: (
-      <PrivateRoute>
-        <DashboardLayout />
-      </PrivateRoute>
-    ),
+    element: <DashboardLayout />,
     errorElement: <Error />,
     children: [
       // Admin Dashboard
       {
         index: true,
-        element: <DashboardHome />
+        element: <DashboardHome />,
       },
       {
         path: "profile",
